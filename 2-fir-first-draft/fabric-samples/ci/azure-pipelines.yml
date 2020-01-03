@@ -1,0 +1,51 @@
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+trigger:
+  - master
+  - release-1.4
+
+jobs:
+  - job: fir_go
+    displayName: Fir (Go)
+    pool:
+      vmImage: ubuntu-18.04
+    dependsOn: []
+    timeoutInMinutes: 60
+    steps:
+      - template: install-deps.yml
+      - template: install-fabric.yml
+      - template: fir-go.yml
+  - job: fir_java
+    displayName: Fir (Java)
+    pool:
+      vmImage: ubuntu-18.04
+    dependsOn: []
+    timeoutInMinutes: 60
+    steps:
+      - template: install-deps.yml
+      - template: install-fabric.yml
+      - template: fir-java.yml
+  - job: fir_javascript
+    displayName: Fir (JavaScript)
+    pool:
+      vmImage: ubuntu-18.04
+    dependsOn: []
+    timeoutInMinutes: 60
+    steps:
+      - template: install-deps.yml
+      - template: install-fabric.yml
+      - template: fir-javascript.yml
+  - job: fir_typescript
+    displayName: Fir (TypeScript)
+    pool:
+      vmImage: ubuntu-18.04
+    dependsOn: []
+    timeoutInMinutes: 60
+    steps:
+      - template: install-deps.yml
+      - template: install-fabric.yml
+      - template: fir-typescript.yml
+
+

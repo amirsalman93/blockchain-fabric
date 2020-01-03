@@ -1,0 +1,14 @@
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+steps:
+  - script: bash startFabric.sh java
+    workingDirectory: fir
+    displayName: Start Fabric
+  - script: retry -- mvn dependency:go-offline
+    workingDirectory: fir/java
+    displayName: Install Fir application dependencies
+  - script: mvn test
+    workingDirectory: fir/java
+    displayName: Run Fir application

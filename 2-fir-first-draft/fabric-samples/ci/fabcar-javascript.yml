@@ -1,0 +1,19 @@
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+steps:
+  - script: bash startFabric.sh javascript
+    workingDirectory: fir
+    displayName: Start Fabric
+  - script: retry -- npm install
+    workingDirectory: fir/javascript
+    displayName: Install Fir application dependencies
+  - script: |
+      set -ex
+      node enrollAdmin
+      node registerUser
+      node invoke
+      node query
+    workingDirectory: fir/javascript
+    displayName: Run Fir application
