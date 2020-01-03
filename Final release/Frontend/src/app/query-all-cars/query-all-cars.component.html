@@ -1,0 +1,34 @@
+<table>
+  <thead>
+    <th>firId</th>
+    <th>district</th>
+    <th>policeStationAddress</th>
+    <th>crimeType</th>
+    <th>caseSummary</th>
+    <th>caseDetailedDescription</th>
+    <th>incidentLocation</th>
+    <th>registrarDesignation</th>
+    <th>registrarName</th>
+    <th>complainantName</th>
+    <th>complainantCnic</th>
+    <th>date</th>
+    <th>Result</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of firs">
+      <td>{{item.Key}}</td>
+      <td>{{item.Record.district}}</td>
+      <td>{{item.Record.policeStationAddress}}</td>
+      <td>{{item.Record.crimeType}}</td>
+      <td>{{item.Record.caseSummary}}</td>
+      <td>{{item.Record.caseDetailedDescription}}</td>
+      <td>{{item.Record.incidentLocation}}</td>
+      <td>{{item.Record.registrarDesignation}}</td>
+      <td>{{item.Record.complainantName}}</td>
+      <td>{{item.Record.complainantCnic}}</td>
+      <td>{{item.Record.date}}</td>
+      <td>{{item.Record.resultSummary}}</td>
+    </tr>
+  </tbody>
+</table>
+

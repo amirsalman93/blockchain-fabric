@@ -1,0 +1,45 @@
+<div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <div class="form-group">
+      <label for="district">District</label>
+      <input type="text" class="form-control" name="district" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="policeStationAddress">Police Station Address</label>
+      <input type="text" class="form-control" name="policeStationAddress" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="crimeType">Crime Type</label>
+      <input type="text" class="form-control" name="crimeType" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="caseSummary">Case Summary</label>
+      <input type="text" class="form-control" name="caseSummary" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="caseDetailedDescription">Case Detailed Description </label>
+      <input type="text" class="form-control" name="caseDetailedDescription" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="incidentLocation">Incident Location </label>
+      <input type="text" class="form-control" name="incidentLocation" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="registrarDesignation">Registrar Designation</label>
+      <input type="text" class="form-control" name="registrarDesignation" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="registrarName">Registrar Name</label>
+      <input type="text" class="form-control" name="registrarName" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="complainantName">Complainant Name</label>
+      <input type="text" class="form-control" name="complainantName" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="complainantCnic">Complainant Cnic</label>
+      <input type="text" class="form-control" name="complainantCnic" required ngModel>
+    </div>
+    <button [disabled]="!f.valid" type="submit" class="btn btn-success">Create FIR</button>
+  </form>
+</div>
