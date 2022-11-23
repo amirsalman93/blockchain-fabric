@@ -20,7 +20,7 @@
         "fabric-ca-client": "~1.4.0",
         "fabric-network": "~1.4.0",
         "mongodb": "^3.4.1",
-        "socket.io": "^2.3.0"
+        "socket.io": "^2.5.0"
     },
     "devDependencies": {
         "body-parser": "^1.18.3",
